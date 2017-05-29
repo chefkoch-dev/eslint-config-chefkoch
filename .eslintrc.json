@@ -1,0 +1,53 @@
+{
+    "extends": "airbnb-base",
+    "plugins": [
+        "import"
+    ],
+    "env": {
+
+        // Diff to airbnb: Change environment to 'browse' to alllow global variables like document and window
+        "browser": true
+
+    },
+    "rules": {
+
+        // Diff to airbnb: 4 instead of 2 spaces
+        "indent": ["error", 4, {
+            "SwitchCase": 1,
+            "VariableDeclarator": 1,
+            "outerIIFEBody": 1,
+            "FunctionDeclaration": {
+                "parameters": 1,
+                "body": 1
+            },
+            "FunctionExpression": {
+                "parameters": 1,
+                "body": 1
+            }
+        }],
+
+        // Diff to airbnb: Allow property mutation on function paramaters
+        "no-param-reassign": ["error", { "props": false }],
+
+        // Diff to airbnb: Allow use of for…in loops
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "ForOfStatement",
+                "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations."
+            },
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            }
+        ],
+
+        // Diff to airbnb: Disable any line length linting (to be solved via code reviews)
+        "max-len": 0
+        
+    }
+}
