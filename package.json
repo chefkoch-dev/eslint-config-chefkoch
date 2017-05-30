@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Chefkoch's JS ESLint config, following our styleguide based on Airbnb's amazing work",
   "main": ".eslintrc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chefkoch-dev/eslint-config-chefkoch"
+  },
   "peerDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
