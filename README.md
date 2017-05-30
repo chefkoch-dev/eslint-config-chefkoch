@@ -1,16 +1,27 @@
 # eslint-config-chefkoch
 
-This repository provides Chefkoch's shared eslint config (`.eslintrc.json`). The config is (for now) a simple extension of Airbnb's base package with a few opinionated overrides.
+This repository provides Chefkoch's shared eslint settings. The config is (for now) a simple extension of Airbnb's base package with a few opinionated overrides.
 
 ## Usage
 
+To use Chefkoch's eslint config, start by installing the required dependencies in your project with:
+
 ```
-yarn add eslint-config-airbnb-base eslint eslint-plugin-import
+yarn add eslint-config-chefkoch eslint-config-airbnb-base eslint eslint-plugin-import
 ```
 
-To use Chefkoch's eslint config, start by installing the required dependencies in your project with the command above (we strongly recommend you use `yarn` but you can also use `npm install <package…>`). Airbnb's config (and, by extension, ours) contains all of their ESLint rules, including ECMAScript 6+. It requires `eslint` and `eslint-plugin-import`.
+We strongly recommend you use `yarn` but you can also use `npm install <package…>`. Airbnb's config (and, by extension, ours) contains all of their ESLint rules, including ECMAScript 6+. It requires `eslint` and `eslint-plugin-import`.
 
-Afterwards, download the `.eslintrc.json` file from this repository and place it in the root folder of your project.
+Afterwards, create a `.eslintrc` file in the root folder of your project. It only needs to contain the following:
+
+```
+{
+    "extends": "chefkoch",
+    "plugins": [
+        "import"
+    ]
+}
+```
 
 ### Use with gulp
 
