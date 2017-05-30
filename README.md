@@ -43,7 +43,7 @@ Airbnb has put a tremendous effort into documenting their _mostly reasonable app
 ### Deviation from Airbnb in Chefkoch's config
 
 There are only a few rules where we have decided to diverge from Airbnb with overrides:
-* we indent with 4 spaces, not 2
-* we allow property mutation on function parameters
-* we allow the use of `for…in` loops
-* we do not test against an arbitrary maximum of characters per line but strive to solve readability issues through code reviews
+* `indent`: we indent with 4 spaces, not 2
+* `no-param-reassign`: we allow property mutation on function parameters
+* `no-restricted-syntax`: we allow the use of `for…in` loops
+* `max-len`: we do not test against an arbitrary maximum of characters per line but strive to solve readability issues through code reviews
