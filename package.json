@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-chefkoch",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Chefkoch's JS ESLint config, following our styleguide based on Airbnb's amazing work",
   "main": ".eslintrc",
   "repository": {
